@@ -1,0 +1,55 @@
+< !DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Soft Wallpaper</title>
+    <style>
+      /*========= reset =========*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+      }
+
+      html,
+      body {
+        height: 100%
+      }
+
+      /*========= wallpaper =========*/
+      .wallpaper {
+        position: fixed;
+        inset: 0;
+        /* top:0; right:0; bottom:0; left:0 */
+        background:
+          radial-gradient(at 20% 80%, #a8edea 0%, transparent 50%),
+          radial-gradient(at 80% 10%, #fed6e3 0%, transparent 50%),
+          radial-gradient(at 60% 60%, #d299c2 0%, transparent 50%),
+          linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-size: 200% 200%;
+        animation: drift 24s ease-in-out infinite;
+        z-index: -1;
+        /* stays behind everything */
+      }
+
+      @keyframes drift {
+
+        0%,
+        100% {
+          background-position: 0% 50%
+        }
+
+        50% {
+          background-position: 100% 50%
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wallpaper"></div>
+    < !-- your app content goes here -->
+  </body>
+
+  </html>
